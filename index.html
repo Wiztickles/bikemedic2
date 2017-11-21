@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bike Medic</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<nav class="navBar">
+	  <nav class="wrapper">
+	    <div class="logo"><img src="SVG/LogoCog.svg" alt=""></div>
+	    <input type="checkbox" id="menu-toggle" />
+	      <label for="menu-toggle" class="label-toggle"></label>
+	    <ul>
+	      <li id="home"><a href="#homeSection">Home</a></li>
+	      <li id="services"><a href="#servicesSection">Services</a></li>
+	      <li id="booknow"><a href="#booknowSection">Book Now</a></li>
+	    </ul>
+	  </nav>
+	</nav>
+	<div class="wrapper" id="homeSection">
+		<h2>AUCKLAND'S MOBILE BICYCLE MECHANIC</h2>
+			<div class="pictures">
+				<img src="img/pic1.jpg" alt="">
+				<img src="img/pic2.jpg" alt="">
+				<img src="img/pic3.jpg" alt="">
+				<img src="img/pic4.jpg" alt="">
+			</div>
+		<div class="about">
+			<p>Bike Medic comes to you for fast, convenient bike servicing with up-front pricing.</p>
+			<p>Choose a package or request a customised quote.</p>
+			<p>The Bike Medic van is a rolling workshop with the tools you’d expect in a bike shop. Your qualified, professional bike mechanic will do the pre-agreed service and answer any questions you have. They will consult you if any additional parts or work are recommended - no nasty surprises when you get your bike back.</p>
+			<p>Bike Medic has a fully equipped workshop and can pickup and return your bike at no extra cost.</p>
+		</div>
+	</div>
+	<div class="wrapper" id="servicesSection">
+		<div class="services">
+			<div class="basic_ser ser_type">
+				<div class="center_ser">
+					<object id="basic" onload="onBasic()" type="image/svg+xml" data="SVG/Basic.svg"></object>
+					<h3 class=>Basic Service</h3>
+					<p>A quality tune up at a superb price</p>
+					<h3>$99</h3>
+					<p>Whats in the pack?</p>
+					<div class="list">
+						<ul>
+							<li>A comprehensive written ‘bike health’ report</li>
+							<li>Tune gears for best possible performance</li>
+							<li>Tune brakes for best possible performance</li>
+							<li>Major bolts checked and torqued</li>
+							<li>Check and adjust crankset if required</li>
+							<li>Check headset and adjust if required</li>
+							<li>Check drivetrain for wear and provide report</li>
+							<li>Lubricate chain and cables</li>
+							<li>Check spokes and wheel condition and provide report</li>
+							<li>Frame and chain wiped down</li>
+							<li>Tyres inflated to recommended pressure</li>
+							<li>Test ride and re-tune if required</li>
+							<li>NB: Parts (if required) are charged separately.</li>
+							<li>NB: Parts (if required) are charged separately.</li>
+							<li>Free callout within 10km radius of Skytower.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="standard_ser ser_type">
+				<div class="center_ser">
+					<object id="standard" onload="onStandard()" type="image/svg+xml" data="SVG/Standard.svg"></object>
+					<h3>Standard Service</h3>
+					<p>The classic service package</p>
+					<h3>$145</h3>
+					<p>Whats in the pack?</p>
+					<div class="list">
+						<ul>
+							<li>Everything in the Basic plan, plus:</li>
+							<li>Wheels trued in truing stand</li>
+							<li>Check and torque all bolts to Manufacturer’s specifications as required</li>
+							<li>Chain thoroughly cleaned</li>
+							<li>Brake surfaces thoroughly cleaned</li>
+							<li>Headset removed, cleaned, re-greased and adjusted</li>
+							<li>Bikewash!</li>
+							<li>NB: Parts (if required) are charged separately.</li>
+							<li>Free callout within 10km radius of Skytower.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="premiun_ser ser_type ">
+				<div class="center_ser">
+					<object id="premiun" onload="onPremiun()" type="image/svg+xml" data="SVG/Premiun.svg"></object>
+					<h3>Premium Service</h3>
+					<p>A premium upgrade to the Standard Service pack</p>
+					<h3>$180</h3>
+					<p>Whats in the pack?</p>
+					<div class="list">
+						<ul>
+							<li>Everything in the Standard plan, plus:</li>
+							<li>Bike stripped to bare frame and cleaned</li>
+							<li>All parts degreased, cleaned and lubricated</li>
+							<li>Hubs disassembled, cleaned, re-greased and adjusted</li>
+							<li>Derailleur Hanger alignment checked with gauge and corrected if required</li>
+							<li>Spoke tension checked and retensioned to manufacturer’s recommendations as required</li>
+							<li>Road Bikes: Shift and Brake Cables replaced if required (no materials charge)</li>
+							<li>Mountain Bikes: Brakes bled if necessary (no materials charge)</li>
+							<li>Mountain Bikes: Rotors cleaned and straightened if required</li>
+							<li>Di2 system error checked, re-calibrated and firmware updated</li>
+							<li>NB: Parts (if required) are charged separately.</li>
+							<li>Free callout within 10km radius of Skytower.</li>
+							<li>Please allow extra time for this service.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="map">
+			<h2>Free callout within 10km radius of the Skytower </h2>
+			<img src="img/map.png" alt="">
+		</div>
+	</div>
+	<div class="wrapper" id="booknowSection">
+		<div class="form">
+			<form action="#">
+				<h2>Book Now</h2>
+				<div class="form_row">
+					<label for="name">Name</label>
+					<input type="text" name="name" class="form-control" placeholder="">
+				</div>
+				<div class="form_row">
+						<label for="servicepackage">Service Pack</label>
+					<select name="servicepackage" id="servicepackage" class="select" required aria-required="true">
+						<option value="Basic Service $99">Basic Service $99</option>
+						<option value="Standard Service $145">Standard Service $145</option>
+						<option value="Premium Service $180">Premium Service $180</option>
+					</select>
+				</div>
+				<div class="form_row">
+					<label for="bikemodel">Bike Model(if know)</label>
+					<input type="text" name="bikemodel" class="form-control" placeholder="">
+				</div>
+				<div class="form_row">
+					<label for="address">Address</label>
+					<input type="text" name="address" class="form-control" placeholder="">
+				</div>
+				<div class="form_row">
+					<label for="phone">Phone</label>
+					<input type="number" name="phone" class="form-control" placeholder="">
+				</div>
+				<div class="form_row">
+					<label for="email">Email</label>
+					<input type="email" name="email" class="form-control" placeholder="">
+				</div>
+				<div class="form_row">
+					<label for="comments">Comments</label>
+					<textarea name="comments" id="" cols="30" rows="10"></textarea>
+				</div>
+				<input type="submit" value="Book Now" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

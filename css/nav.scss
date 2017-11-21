@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+
+//Color Variables
+$green: #63B6AC; //Green
+$black: #333; //Black
+$red: #EC284F; //Red
+
+// Base Styles
+body {
+  color: $black;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+}
+
+
+
+.navBar {
+  background-color: $black;
+  position: fixed;
+  min-width: 100%;
+}
+
+.logo {
+  border-radius: 50px;
+  display: inline-block;
+  width: 25%;
+  margin: 1em 0;
+  cursor: pointer;
+  object {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {width: 50%}
+}
+
+// Content Wrapper
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 4%;
+}
+
+// Full Navigation, including mobile menu
+nav {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    width: 50%;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
+  }
+  
+  li  {
+    display: inline-block;
+    margin-left: 1.5em;
+    border: 2px white solid;
+    padding: 0.5em 1em;
+    transition: all .3s ease;
+    &:hover {border: 2px $red solid; 
+      a {
+        color: $red;
+      }
+
+      }
+  }
+  
+  #menu-toggle {display: none;}
+  
+  .label-toggle {display: none;}
+  
+  .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      ul {
+        a {
+          color: $black;
+        }
+      }
+    }
+    ul {
+      background-color: #eee;
+      display: block;
+      height: 0;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+    }
+    
+    li {
+      border-bottom: 2px solid $black;
+      color: $black;
+      display: block;
+      font-size: 1.5em;
+      padding: 2em 0;
+      margin-left: 0;
+      &:hover {border: 2px solid $black ; 
+        a {
+          color: $red;
+        }
+
+        }
+    }
+  
+    #menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 100vh;
+      visibility: visible;
+    }
+    
+    .label-toggle {
+      background: linear-gradient(to bottom, $green 0%, $green 20%, transparent 20%, transparent 40%, $green 40%, $green 60%, transparent 60%, transparent 80%, $green 80%, $green 100%); //Gradient Hamburger
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 35px;
+      margin-top: 1em;
+      width: 35px;
+    }
+    
+    .wrapper {display: block;}
+  }
+}
